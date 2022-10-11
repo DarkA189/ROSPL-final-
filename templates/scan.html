@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block text %}active{% endblock text %}
+{% block content %}
+<form action="/docscan/process/" method="POST">
+  {% csrf_token %}
+    <label for="img">Select image:</label>
+    <input type="file" id="img" name="img">
+    <input type="submit">
+</form>
+{% endblock content %}
