@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block text %}active{% endblock text %}
+{% block content %}
+
+  <center>
+    <h1 style="margin-top: 8rem; font-weight: bold;">Text to Handwritten Results</h1>
+  </center>
+  <img src="{% static 'images/handwriting.png' %}"/>
+
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block text %}active{% endblock text %}
+{% block content %}
+<form action="/texthand/process/" method="POST">
+  {% csrf_token %}
+  <center>
+    <h1 style="margin-top: 8rem; font-weight: bold;">Text to Handwritten</h1>
+  </center>
+<div class="text-editor" style="margin-top: 4rem">
+    <center>
+      <textarea style="border: 1px solid #aaaaaa;  box-shadow: 10px 10px 5px #aaaaaa; border-radius: 10px;" name="content-area" id="content-area" rows="7" cols="75"></textarea>
+    </center>
+</div>
+<center>
+  <button style="padding-left: 2rem; padding-right: 2rem; font-size: 1.2rem; margin-top: 2rem" type="submit" class="btn btn-primary">Submit</button>
+</center>
+</form>
+{% endblock content %}
